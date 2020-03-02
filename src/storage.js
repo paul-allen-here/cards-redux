@@ -1,11 +1,13 @@
 const storage = window.localStorage;
-let cards = [];
+
 
 const storageMiddleware = store => next => action => {
+    let cards = [];
+
     switch (action.type) {
         case "CONNECT_TO_STORAGE":
             cards = JSON.parse(window.localStorage.getItem("cards"));
-            store.dispatch({ type: 'LOAD DATA', payload: cards });
+            store.dispatch({ type: 'LOAD_DATA', payload: cards });
             break;
         case "CLEAR_DATA": 
             storage.clear();
@@ -14,12 +16,15 @@ const storageMiddleware = store => next => action => {
             let card = action.payload;
             console.log(card);
             cards = JSON.parse(window.localStorage.getItem("cards"));
-            if (card && cards) {
-                card.id = cards.length;
+
+            if (card) {
+                card.id = cards ? cards.length : 0;
+                if (!cards) { cards = [] }
                 cards.push(card);
                 try {
                     storage.setItem("cards", JSON.stringify(cards));
-                    store.dispatch({ type: 'LOAD DATA', payload: cards });
+                    console.log(cards);
+                    store.dispatch({ type: 'LOAD_DATA', payload: cards });
                 } catch (e) {
                     alert("Local Storage is full, Please empty data");
                     // storage.clear();

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Card from '../card/Card';
+import Card from '../Card/Card';
 import './CardList.css';
 import queryString from 'query-string';
 

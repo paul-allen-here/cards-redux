@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import CardList from '../cardList/CardList';
-import Modal from '../modal/Modal';
+import CardList from '../CardList/CardList';
+import Modal from '../Modal/Modal';
 import './App.css';
 
 const App = () => {
@@ -9,12 +9,11 @@ const App = () => {
   const show = useSelector(state => state.showModal);
   const cards = useSelector(state => state.cards);
 
-
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch({ type: "CONNECT_TO_STORAGE" });
-  }, [ dispatch, show ]);
+  }, [ dispatch ]);
   
   return (
     <div>

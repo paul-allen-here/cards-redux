@@ -5,7 +5,7 @@ import image from './images/image.json';
 
 const img = image.image;
 
-// {id: 1, title: 'SemRush 101', desc: 'Default info', image: img}, 
+// {id: 1, title: 'SemRush 101', desc: 'Default info', image: img},
 // {id: 2, title: 'SemRush 101', desc: 'Default info', image: img}, 
 // {id: 3, title: 'SemRush 101', desc: 'Default info', image: img}, 
 // {id: 4, title: 'SemRush 101', desc: 'Default info', image: img}, 
@@ -22,9 +22,10 @@ const initialState = {
     cards: []
 }
 
-let newState;
-
 const rootReducer = (state = initialState, action) => {
+
+    let newState;
+
     switch (action.type) {
         case "TEST":
             return state;
