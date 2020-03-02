@@ -1,0 +1,32 @@
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Reg';
+  src: local('Ubuntu-Reg'), url(/fonts/Ubuntu-Regular) format('truetype');
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.button {
+  font-size: 19px;
+  height: 45px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.1s 0s;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Ubuntu', sans-serif;
+}

@@ -1,0 +1,146 @@
+#myfile {
+    display: none;
+}
+
+
+.modal-container {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.modal {
+    margin: 20px 5px;
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container .img-btn {
+    position: absolute;
+    top: 17%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.img-container .img-btn:hover {
+    background-color:rgba(0, 0, 0, 0.8);
+}
+
+.modal-info {
+    padding: 0 25px;
+    height: 90%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.modal-header {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.card-info {
+    color: rgb(153, 153, 153)
+}
+
+.row {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.end {
+    justify-content: flex-end;
+}
+
+.top-button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.input-box {
+    border-radius: 5px;
+    height: 120px;
+    background-color: rgb(228, 236, 241);
+    color: rgb(43, 148, 225);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.label {
+    font-weight: 400;
+}
+
+.input-group {
+    font-size: 19px;
+}
+
+.input {
+    font-size: 18px;
+    margin-top: 10px;
+    min-width: 100%;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169);
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.button-save {
+    width: 100px;
+    color: #fff;
+    font-weight: 300;
+    background-color:rgb(79, 174, 51);
+}
+  
+.button-save:hover {
+    background-color: rgb(29, 156, 0);
+}
+  
+.button-save:active {
+    background-color: rgb(29, 156, 0);
+    box-shadow: inset 0px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-input-placeholder {color: rgb(191, 191, 191);}
+::-moz-placeholder          {color: rgb(191, 191, 191);}
+:-moz-placeholder           {color: rgb(191, 191, 191);}
+:-ms-input-placeholder      {color: rgb(191, 191, 191);}

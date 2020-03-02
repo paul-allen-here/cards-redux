@@ -1,0 +1,25 @@
+.card {
+    margin: 20px 15px;
+    width: 30%;
+    height: 380px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.text-info {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-info {
+    color: rgb(153, 153, 153)
+}
+
+@media screen and (max-width: 920px) {
+    .card {
+        width: 95%;
+    }
+}

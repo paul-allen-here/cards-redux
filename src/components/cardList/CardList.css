@@ -1,0 +1,15 @@
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+@media screen and (max-width: 920px) {
+    .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+}
