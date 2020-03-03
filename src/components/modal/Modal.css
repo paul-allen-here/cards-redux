@@ -2,7 +2,6 @@
     display: none;
 }
 
-
 .modal-container {
     height: 100%;
     width: 100%;
@@ -50,7 +49,11 @@
 }
 
 .img-container .img-btn:hover {
-    background-color:rgba(0, 0, 0, 0.8);
+    background-color:rgb(216, 62, 62, 0.8);
+}
+
+.img-container .img-btn:active {
+    background-color:rgb(194, 27, 27);
 }
 
 .modal-info {
@@ -122,6 +125,13 @@
     font-family: 'Ubuntu', sans-serif;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.input:focus {
+    border-radius: 5px;
+    border: solid rgb(104, 179, 233);
+    box-shadow: 0 0 0 3px rgb(175, 203, 225);
+    outline-style: none;
 }
 
 .button-save {

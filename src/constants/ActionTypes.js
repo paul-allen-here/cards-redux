@@ -1,0 +1,7 @@
+export const CONNECT_TO_STORAGE = 'CONNECT_TO_STORAGE'
+export const CLEAR_DATA = 'CLEAR_DATA'
+export const SAVE_CARD = 'SAVE_CARD'
+
+export const LOAD_DATA = 'LOAD_DATA'
+export const UPLOAD_PICTURE = 'UPLOAD_PICTURE'
+export const TOGGLE_MODAL = 'TOGGLE_MODAL'

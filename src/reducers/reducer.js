@@ -1,17 +1,7 @@
-import image from './images/image.json';
-
-// JSON.parse(window.localStorage.getItem("cast")); // get
-// window.localStorage.setItem('cards', JSON.stringify(cards));
-
-const img = image.image;
-
-// {id: 1, title: 'SemRush 101', desc: 'Default info', image: img},
-// {id: 2, title: 'SemRush 101', desc: 'Default info', image: img}, 
-// {id: 3, title: 'SemRush 101', desc: 'Default info', image: img}, 
-// {id: 4, title: 'SemRush 101', desc: 'Default info', image: img}, 
-// {id: 5, title: 'SemRush 101', desc: 'Default info', image: img}
+import * as types from '../constants/ActionTypes';
 
 const initialState = {
+    cardsPerPage: 3,
     counter: 6,
     showModal: false,
     buffer: {
@@ -27,9 +17,7 @@ const rootReducer = (state = initialState, action) => {
     let newState;
 
     switch (action.type) {
-        case "TEST":
-            return state;
-        case "LOAD_DATA":
+        case types.LOAD_DATA:
             newState = {...state};
             const cards = action.payload;
             if (cards) {
@@ -42,11 +30,11 @@ const rootReducer = (state = initialState, action) => {
             newState.buffer.title = null;
             newState.buffer.desc = null;
             return newState;
-        case "UPLOAD_PICTURE":
+        case types.UPLOAD_PICTURE:
             newState = {...state};
             newState.buffer.img = action.payload;
             return newState;
-        case "TOGGLE_MODAL":
+        case types.TOGGLE_MODAL:
             newState = {...state};
             newState.showModal = !newState.showModal;
             return newState;

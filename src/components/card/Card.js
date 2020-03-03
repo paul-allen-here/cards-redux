@@ -3,9 +3,7 @@ import './Card.css';
 
 // import image from '../../images/1.png';
 
-const Card = ({ props }) => {
-
-    let {title, desc, image} = props;
+const Card = ({ title, desc, image }) => {
     
     return (
         <div className="card">

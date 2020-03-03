@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { uploadPic, saveCard, toggleModal } from '../../actions'
 import './Modal.css';
 
 const Modal = () => {
@@ -14,7 +15,6 @@ const Modal = () => {
     const fileInput = useRef(null);
 
     const dispatch = useDispatch();
-    dispatch({ type: 'TEST', payload: "HERE IS PAYLOAD!" });
 
     useEffect(() => {
         if (!buffer.img) {
@@ -25,11 +25,8 @@ const Modal = () => {
     const uploadImage = (event) => {
         const reader = new FileReader();
         reader.onload = () => {
-            if (reader.result && localStorage) {
-                dispatch({
-                    type: 'UPLOAD_PICTURE',
-                    payload: reader.result
-                });
+            if (reader.result) {
+                dispatch(uploadPic(reader.result));
                 setFilled(true);
             } else {
                 alert();
@@ -86,10 +83,7 @@ const Modal = () => {
             setDesc("");
             setTitle("");
 
-            dispatch({
-                type: 'SAVE_CARD',
-                payload: card
-            });
+            dispatch(saveCard(card));
         }
     }
 
@@ -100,12 +94,12 @@ const Modal = () => {
             <div className='modal-container'>
                 <div className="modal">
                     <div className='row end'>
-                        <button 
+                        <a  href = '!#'
                             className="top-button" 
-                            onClick = {() => {dispatch({ type: 'TOGGLE_MODAL'})}}>Close</button>
-                        <button 
-                            className="top-button" 
-                            onClick = {() => {dispatch({ type: 'CLEAR_DATA'})}}>Clear</button>
+                            onClick = {
+                                (e) => { e.preventDefault();
+                                dispatch(toggleModal()) 
+                            }}>Close</a>
                     </div>
                     <div className="modal-info card-list">
                         <h1 className = "modal-header">Add new</h1>

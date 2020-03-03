@@ -1,23 +1,22 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { connectStorage, toggleModal } from '../../actions'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CardList from '../CardList/CardList';
 import Modal from '../Modal/Modal';
 import './App.css';
 
 const App = () => {
 
-  const show = useSelector(state => state.showModal);
-  const cards = useSelector(state => state.cards);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch({ type: "CONNECT_TO_STORAGE" });
+    dispatch(connectStorage());
   }, [ dispatch ]);
   
   return (
-    <div>
-      <Modal props = {{show: show}}/>
+    <Router>
+      <Modal/>
       <div className="app">
         <header className="image_covered wrap">
           <div>
@@ -27,14 +26,14 @@ const App = () => {
               webinars conducted by the best digital marketing experts
             </p>
             <button className="button button-add"
-            onClick={() => {dispatch({ type: 'TOGGLE_MODAL'})}}>Add new</button>
+            onClick={() => {dispatch(toggleModal())}}>Add new</button>
           </div>
         </header>
         <div className = "container">
-          <CardList props = {{cards}}/>
+          <Route path = '/' component = { CardList }/>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
