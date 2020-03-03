@@ -74,10 +74,11 @@ const Modal = () => {
         };
 
         if (!card.image || !card.title || !card.desc) {
-            !card.image && alert("Choose image for your c card!");
-            !card.title && alert("Enter title for your c card!");
-            !card.desc && alert("Enter description for your c card!");
-            
+            let alertMessage = '';
+            if (!card.image) alertMessage = `${alertMessage} Choose image for your card!\n`;
+            if (!card.title) alertMessage = `${alertMessage} Enter title for your card!\n`;
+            if (!card.desc) alertMessage = `${alertMessage} Enter description for your card!\n`;
+            alert(alertMessage);
         } else {
             setFilled(false);
             setDesc("");
