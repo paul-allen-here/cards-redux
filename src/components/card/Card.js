@@ -1,8 +1,6 @@
 import React from 'react';
 import './Card.css';
 
-// import image from '../../images/1.png';
-
 const Card = ({ title, desc, image }) => {
     
     return (
