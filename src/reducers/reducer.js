@@ -1,7 +1,7 @@
 import * as types from '../constants/ActionTypes';
 
 const initialState = {
-    cardsPerPage: 3,
+    cardsPerPage: 6,
     counter: 6,
     showModal: false,
     buffer: {

@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     list-style: none;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 920px) {

@@ -13,6 +13,7 @@
 
 .jumbotron-describtion {
   max-width: 480px;
+  min-width: 400px;
   justify-content: center;
   font-size: 15px;
   margin-bottom: 25px;
@@ -50,9 +51,10 @@
 }
 
 .container {
-  max-width: 1130px;
+  max-width: 1100px;
   min-width: 400px;
   margin: 40px auto;
+  box-sizing: content-box;
 }
 
 .image-container {
@@ -61,4 +63,10 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 920px) {
+  .jumbotron-describtion {
+      padding: 0 20px;
+  }
 }
