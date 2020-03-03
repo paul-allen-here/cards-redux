@@ -16,8 +16,6 @@ const Pagination = ({ cardsPerPage, totalCards, activePage }) => {
                 // eslint-disable-next-line
                 if (number == activePage) {
                     className = `page-item-active`;
-                    console.log(number, activePage);
-                    console.log("here");
                 }
                 return (
                     <Link key={ number } className={ className }
